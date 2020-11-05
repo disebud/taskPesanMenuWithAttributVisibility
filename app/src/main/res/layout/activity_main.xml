@@ -12,6 +12,7 @@
        android:layout_gravity="center_vertical"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+
        android:orientation="vertical">
 
        <ImageView
@@ -32,7 +33,7 @@
            android:layout_width="wrap_content"
            android:layout_height="100dp"
            android:text="MEJA 1"
-           android:onClick="mejaSatu"
+           android:onClick="ButtonClicked"
            android:textSize="20sp"
            android:textStyle="bold"
            android:layout_margin="10dp"
@@ -44,7 +45,7 @@
                android:layout_width="wrap_content"
                android:layout_height="100dp"
                android:text="MEJA 2"
-               android:onClick="mejaDua"
+               android:onClick="ButtonClicked"
                android:backgroundTint="@color/cardview_dark_background"
                android:textSize="20sp"
                android:textStyle="bold"
@@ -62,7 +63,7 @@
                android:layout_width="wrap_content"
                android:layout_height="100dp"
                android:text="MEJA 3"
-               android:onClick="mejaTiga"
+               android:onClick="ButtonClicked"
                android:backgroundTint="@color/cardview_dark_background"
                android:textSize="20sp"
                android:textStyle="bold"
@@ -75,7 +76,7 @@
                android:layout_width="wrap_content"
                android:layout_height="100dp"
                android:text="MEJA 4"
-               android:onClick="mejaEmpat"
+               android:onClick="ButtonClicked"
                android:textSize="20sp"
                android:textStyle="bold"
                android:layout_margin="10dp"
@@ -127,7 +128,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:text="Nama Makanan" />
+                android:text="Nama Menu" />
 
             <TextView
                 android:layout_width="100dp"
@@ -164,7 +165,7 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Nama Makanan" />
+                android:hint="Nama Menu" />
 
             <EditText
                 android:id="@+id/et_harga_1"
@@ -200,7 +201,7 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Nama Makanan" />
+                android:hint="Nama Menu"  />
 
             <EditText
                 android:id="@+id/et_harga_2"
@@ -236,7 +237,7 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Nama Makanan" />
+                android:hint="Nama Menu" />
 
             <EditText
                 android:id="@+id/et_harga_3"
@@ -262,7 +263,7 @@
         <Button
             android:id="@+id/btn_hitung"
             android:layout_marginTop="30dp"
-            android:onClick="hitungTotal"
+            android:onClick="ButtonClicked"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -561,7 +562,7 @@
                 android:layout_margin="10dp"
                 android:layout_marginTop="50dp"
                 android:layout_weight="1"
-                android:onClick="editPesanan"
+                android:onClick="ButtonClicked"
                 android:text="EDIT" />
 
             <Button
@@ -572,7 +573,7 @@
                 android:layout_margin="10dp"
                 android:layout_marginTop="30dp"
                 android:layout_weight="1"
-                android:onClick="backHome"
+                android:onClick="ButtonClicked"
                 android:text="HOME" />
 
 

@@ -16,6 +16,63 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    fun ButtonClicked(view: View){
+        if(view is Button){
+            var clicked = view.isClickable
+
+            when(view){
+                btn_table_1 -> {
+                    if (clicked){
+                        firstLayout.visibility = View.GONE
+                        secondLayout.visibility = View.VISIBLE
+
+                        meja_x_layout_2.text = btn_table_1.text.toString()
+                    }
+                }
+                btn_table_2 -> {
+                    if (clicked){
+                        firstLayout.visibility = View.GONE
+                        secondLayout.visibility = View.VISIBLE
+
+                        meja_x_layout_2.text = btn_table_2.text.toString()
+                    }
+                }
+                btn_table_3 -> {
+                    if (clicked){
+                        firstLayout.visibility = View.GONE
+                        secondLayout.visibility = View.VISIBLE
+
+                        meja_x_layout_2.text = btn_table_3.text.toString()
+                    }
+                }
+                btn_table_4 -> {
+                    if (clicked){
+                        firstLayout.visibility = View.GONE
+                        secondLayout.visibility = View.VISIBLE
+
+                        meja_x_layout_2.text = btn_table_4.text.toString()
+                    }
+                }
+                btn_hitung -> {
+                    if (clicked){
+                        hitungTotal()
+                    }
+                }
+                btn_back_2 -> {
+                    if (clicked){
+                        firstLayout.visibility = View.GONE
+                        thirdLayout.visibility = View.GONE
+                        secondLayout.visibility = View.VISIBLE
+                    }
+                }
+                else ->{
+                    backHome()
+                }
+            }
+        }
+
+    }
+
     fun mejaSatu(view: View) {
         firstLayout.visibility = View.GONE
         secondLayout.visibility = View.VISIBLE
@@ -41,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         meja_x_layout_2.text = btn_table_4.text.toString()
     }
 
-    fun hitungTotal(view: View) {
+    fun hitungTotal() {
 
         if (et_pesan_menu1.text.toString() == "" || et_harga_1.text.toString() == "" || et_jlh_1.text.toString() == ""
             || et_pesan_menu2.text.toString() == "" || et_harga_2.text.toString() == "" || et_jlh_2.text.toString() == ""
@@ -82,19 +139,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun currency(harga: Double, textView: TextView) {
-        val localeID = Locale("in", "ID")
-        val formatRupiah = NumberFormat.getCurrencyInstance(localeID)
-        textView.text = formatRupiah.format(harga as Double)
-    }
-
     fun editPesanan(view: View) {
         firstLayout.visibility = View.GONE
         thirdLayout.visibility = View.GONE
         secondLayout.visibility = View.VISIBLE
     }
 
-    fun backHome(view: View) {
+    fun backHome() {
         thirdLayout.visibility = View.GONE
         secondLayout.visibility = View.GONE
         firstLayout.visibility = View.VISIBLE
@@ -111,5 +162,11 @@ class MainActivity : AppCompatActivity() {
         et_harga_3.text.clear()
         et_jlh_3.text.clear()
 
+    }
+
+    fun currency(harga: Double, textView: TextView) {
+        val localeID = Locale("in", "ID")
+        val formatRupiah = NumberFormat.getCurrencyInstance(localeID)
+        textView.text = formatRupiah.format(harga as Double)
     }
 }
