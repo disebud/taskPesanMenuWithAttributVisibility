@@ -15,6 +15,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
     private var productSatu : Product = Product()
     private var productDua : Product = Product()
     private var productTiga : Product = Product()
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+
         binding.productSatu = productSatu
         binding.productDua = productDua
         binding.productTiga = productTiga

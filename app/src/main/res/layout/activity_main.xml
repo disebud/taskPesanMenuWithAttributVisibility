@@ -18,8 +18,6 @@
             name="jumlahTotal"
             type="Double" />
 
-
-
     </data>
 
     <FrameLayout
@@ -30,6 +28,7 @@
         <LinearLayout
             android:id="@+id/firstLayout"
             android:layout_width="match_parent"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="vertical">
@@ -288,7 +287,6 @@
             android:id="@+id/thirdLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
             android:orientation="vertical">
 
             <TextView
