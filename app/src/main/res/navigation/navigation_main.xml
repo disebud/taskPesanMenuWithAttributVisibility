@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/mejaFragment">
+
+    <fragment
+        android:id="@+id/mejaFragment"
+        android:name="com.example.apptaskfinal.MejaFragment"
+        android:label="fragment_meja"
+        tools:layout="@layout/fragment_meja" >
+        <action
+            android:id="@+id/action_mejaFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.apptaskfinal.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_hasilFragment"
+            app:destination="@id/hasilFragment" />
+        <argument
+            android:name="meja"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/hasilFragment"
+        android:name="com.example.apptaskfinal.HasilFragment"
+        android:label="fragment_hasil"
+        tools:layout="@layout/fragment_hasil" >
+        <action
+            android:id="@+id/action_hasilFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_hasilFragment_to_mejaFragment"
+            app:destination="@id/mejaFragment" />
+        <argument
+            android:name="product1"
+            app:argType="com.example.apptaskfinal.Product" />
+        <argument
+            android:name="product2"
+            app:argType="com.example.apptaskfinal.Product" />
+        <argument
+            android:name="product3"
+            app:argType="com.example.apptaskfinal.Product" />
+        <argument
+            android:name="Meja3"
+            app:argType="string" />
+    </fragment>
+</navigation>
