@@ -17,9 +17,6 @@
             name="productTiga"
             type="com.example.apptaskfinal.Product" />
 
-        <variable
-            name="jumlahTotal"
-            type="Double" />
 
 
     </data>

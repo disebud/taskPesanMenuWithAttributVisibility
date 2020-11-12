@@ -22,13 +22,12 @@ class HasilFragment : Fragment() {
             inflater, R.layout.fragment_hasil, container, false)
 
         binding.btnMain2.setOnClickListener {  view :View ->
-//            view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
-            view.findNavController().navigate(HasilFragmentDirections.actionHasilFragmentToMejaFragment())
+            view.findNavController().navigate(R.id.action_hasilFragment_to_mejaFragment)
+//            view.findNavController().navigate(HasilFragmentDirections.actionHasilFragmentToMejaFragment())
         }
 
         binding.btnBack2.setOnClickListener {  view :View ->
             view.findNavController().navigate(R.id.action_hasilFragment_to_menuFragment)
-
         }
 
         val args = HasilFragmentArgs.fromBundle(requireArguments())

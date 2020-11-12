@@ -33,10 +33,14 @@
         tools:layout="@layout/fragment_hasil" >
         <action
             android:id="@+id/action_hasilFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_hasilFragment_to_mejaFragment"
-            app:destination="@id/mejaFragment" />
+            app:destination="@id/mejaFragment"
+            app:popUpTo="@id/mejaFragment"
+            app:popUpToInclusive="false" />
         <argument
             android:name="product1"
             app:argType="com.example.apptaskfinal.Product" />
