@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mejaFragment"
         android:name="com.example.apptaskfinal.MejaFragment"
-        android:label="fragment_meja"
+        android:label="Meja Restaurant App"
         tools:layout="@layout/fragment_meja" >
         <action
             android:id="@+id/action_mejaFragment_to_menuFragment"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.apptaskfinal.MenuFragment"
-        android:label="fragment_menu"
+        android:label="Menu Restaurant"
         tools:layout="@layout/fragment_menu" >
         <action
             android:id="@+id/action_menuFragment_to_hasilFragment"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/hasilFragment"
         android:name="com.example.apptaskfinal.HasilFragment"
-        android:label="fragment_hasil"
+        android:label="Pesanan Menu"
         tools:layout="@layout/fragment_hasil" >
         <action
             android:id="@+id/action_hasilFragment_to_menuFragment"

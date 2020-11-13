@@ -9,6 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.apptaskfinal.databinding.FragmentHasilBinding
 import com.example.apptaskfinal.databinding.FragmentMenuBinding
+import java.text.NumberFormat
+import java.util.*
 
 class HasilFragment : Fragment() {
 
@@ -27,7 +29,7 @@ class HasilFragment : Fragment() {
         }
 
         binding.btnBack2.setOnClickListener {  view :View ->
-            view.findNavController().navigate(R.id.action_hasilFragment_to_menuFragment)
+            view.findNavController().popBackStack()
         }
 
         val args = HasilFragmentArgs.fromBundle(requireArguments())
@@ -39,7 +41,10 @@ class HasilFragment : Fragment() {
         binding.productDua3 = productDua
         binding.productTiga3 = productTiga
 
-        binding.jumlahTotal3 = productSatu!!.total + productDua!!.total + productTiga!!.total
+        var grandTotal = productSatu!!.total + productDua!!.total + productTiga!!.total
+        val locale = Locale("in","ID")
+        val numberFormat = NumberFormat.getNumberInstance(locale)
+        binding.jumlahTotal3 = "Rp. " + numberFormat.format(grandTotal)
 
         binding.mejaLayout3 = args.meja3
 

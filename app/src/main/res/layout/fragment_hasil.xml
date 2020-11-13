@@ -19,7 +19,7 @@
 
         <variable
             name="jumlahTotal3"
-            type="Integer" />
+            type="String" />
 
     </data>
 
@@ -112,7 +112,7 @@
                     android:id="@+id/tv_harga_1"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="@{String.valueOf(productSatu3.harga)}"
+                    android:text="@{productSatu3.hargaRupiah}"
                     android:layout_weight="1" />
 
                 <TextView
@@ -143,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:textSize="16sp"
-                    android:text="@{String.valueOf(productSatu3.total)}"
+                    android:text="@{productSatu3.totalRupiah}"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -167,7 +167,7 @@
                     android:id="@+id/tv_harga_2"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="@{String.valueOf(productDua3.harga)}"
+                    android:text="@{productDua3.hargaRupiah}"
                     android:layout_weight="1"
                     />
 
@@ -199,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:textSize="16sp"
-                    android:text="@{String.valueOf(productDua3.total)}"
+                    android:text="@{productDua3.totalRupiah}"
                     android:textStyle="bold"
                      />
 
@@ -226,7 +226,7 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@{String.valueOf(productTiga3.harga)}"
+                    android:text="@{productTiga3.hargaRupiah}"
                />
 
                 <TextView
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:textSize="16sp"
-                    android:text="@{String.valueOf(productTiga3.total)}"
+                    android:text="@{productTiga3.totalRupiah}"
                     android:textStyle="bold"
                />
 
