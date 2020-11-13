@@ -51,72 +51,25 @@ class MenuFragment : Fragment() {
 
             btnHitung.setOnClickListener { view: View ->
 
-//                if (etPesanMenu1.text.toString() == "" || etHarga1.text.toString() == "" || etJlh1.text.toString() == ""
-//                    || etPesanMenu2.text.toString() == "" || etHarga2.text.toString() == "" || etJlh2.text.toString() == ""
-//                    || etPesanMenu3.text.toString() == "" || etHarga3.text.toString() == "" || etJlh3.text.toString() == ""
-//                ) {
-//                    Toast.makeText(activity, "Masih ada inputan kosong", Toast.LENGTH_SHORT)
-//                        .show()
-//                } else {
-//                    hitungMenu(binding)
-//                    view.findNavController().navigate(
-//                        MenuFragmentDirections.actionMenuFragmentToHasilFragment(
-//                            productSatuD,
-//                            productDuaD,
-//                            productTigaD,
-//                            args.meja
-//                        )
-//                    )
-//             // Init Product 1
-                val product1 = Product(etPesanMenu1.text.toString())
-                if(etHarga1.text.isNotEmpty())
-                {
-                    product1.harga = etHarga1.text.toString().toInt()
+                if (etPesanMenu1.text.toString() == "" || etHarga1.text.toString() == "" || etJlh1.text.toString() == ""
+                    || etPesanMenu2.text.toString() == "" || etHarga2.text.toString() == "" || etJlh2.text.toString() == ""
+                    || etPesanMenu3.text.toString() == "" || etHarga3.text.toString() == "" || etJlh3.text.toString() == ""
+                ) {
+                    Toast.makeText(activity, "Masih ada inputan kosong", Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    hitungMenu(binding)
+                    view.findNavController().navigate(
+                        MenuFragmentDirections.actionMenuFragmentToHasilFragment(
+                            productSatuD,
+                            productDuaD,
+                            productTigaD,
+                            args.meja
+                        )
+                    )
                 }
-                if(etJlh1.text.isNotEmpty())
-                {
-                    product1.jumlah=etJlh1.text.toString().toInt()
-                }
-                // Init Product 2
-                val product2 = Product(etPesanMenu2.text.toString())
-                if(etHarga2.text.isNotEmpty())
-                {
-                    product2.harga = etHarga2.text.toString().toInt()
-                }
-                if(etJlh2.text.isNotEmpty())
-                {
-                    product2.jumlah=etJlh2.text.toString().toInt()
-                }
-                // Init Product 3
-                val product3 = Product(etPesanMenu3.text.toString())
-                if(etHarga3.text.isNotEmpty())
-                {
-                    product3.harga = etHarga3.text.toString().toInt()
-                }
-                if(etJlh3.text.isNotEmpty())
-                {
-                    product3.jumlah=etJlh3.text.toString().toInt()
-                }
-
-                invalidateAll()
-
-                if(product1.nama != "" && product1.harga != 0 && product1.jumlah != 0){
-                    if(product2.harga == 0 || product2.jumlah == 0){
-                        product2.nama = "-"
-                        product2.harga = 0
-                        product2.jumlah = 0
-                    }
-                    if(product3.harga == 0 || product3.jumlah == 0){
-                        product3.nama = "-"
-                        product3.harga = 0
-                        product3.jumlah = 0
-                    }
-                 view.findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToHasilFragment(product1,product2,product3,args.meja))
-                }
-
-
             }
-
+            invalidateAll()
         }
 //        return inflater.inflate(R.layout.fragment_menu, container, false)
         return  binding.root
